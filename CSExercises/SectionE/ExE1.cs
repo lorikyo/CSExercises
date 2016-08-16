@@ -31,7 +31,15 @@ namespace CSExercises
         public static int CalculateFactorialInc(int n)
         {
             //YOUR CODE HERE
-            return 0;
+            int i = 1;
+            int factorial = 1;
+            while (i <= n)
+            {
+                factorial = factorial * i;
+                i++;
+            }
+
+            return factorial;
 
 
         }
@@ -39,7 +47,14 @@ namespace CSExercises
         public static int CalculateFactorialDec(int n)
         {
             //YOUR CODE HERE
-            return 0;
+            int i = n-1;
+            int factorial = n;
+            while (i >= 1)
+            {
+                factorial = factorial * i;
+                i--;
+            }
+            return factorial;
 
 
         }
