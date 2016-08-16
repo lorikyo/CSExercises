@@ -14,7 +14,14 @@ namespace CSExercises
             //YOUR CODE HERE
             //Hint: you can call ExE3.IsPrime method (from previous exercise) 
             //to check whether a number is a prime or not.
-
+            int i;
+            for (i=5; i<=1000; i++)
+            {
+                if (ExE3.IsPrime(i))
+                {
+                    Console.Write(i + " ");
+                }
+            }
 
         }
     }
