@@ -20,6 +20,8 @@ namespace CSExercises
         public static void Main(string[] args)
         {
             //YOUR CODE HERE
+            Console.WriteLine("Fan Jinlong David");
+            Console.WriteLine("e0044899@u.nus.edu");
         }
     }
 }
