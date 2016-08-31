@@ -14,12 +14,18 @@ namespace CSExercises
         public static void Main(string[] args)
         {
             //YOUR CODE HERE
+            Console.WriteLine("enter double precision number to square root: ");
+            string inputString = Console.ReadLine();
+            double inputDbl = Convert.ToDouble(inputString);
+            double result = SQRT(inputDbl);
+            Console.WriteLine(result);
         }
 
         public static double SQRT(double x)
         {
             //YOUR CODE HERE: return the square root of x
-            return 0;
+            double ans = Math.Sqrt(x);
+            return ans;
 
         }
     }

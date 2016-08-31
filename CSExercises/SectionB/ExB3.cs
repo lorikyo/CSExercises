@@ -19,13 +19,23 @@ namespace CSExercises
         public static void Main(string[] args)
         {
             //YOUR CODE HERE
-
+            Console.WriteLine("Enter salary: ");
+            string salString = Console.ReadLine();
+            string income = CalculateIncome(salString);
+            Console.WriteLine(income);
         }
 
         public static string CalculateIncome(string salaryStr)
         {
             //YOUR CODE HERE
-            return null;
+            double housingAllowance, transportAllowance;
+            double salaryDbl = Convert.ToDouble(salaryStr);
+            housingAllowance = 10.00/100*salaryDbl;
+            transportAllowance = 3.0 / 100 * salaryDbl;
+            double incomeDbl = salaryDbl + housingAllowance + transportAllowance;
+            string incomeStr = string.Format("{0:c}", incomeDbl);
+            //Console.WriteLine(housingAllowance);
+            return incomeStr;
         }
     }
 }
