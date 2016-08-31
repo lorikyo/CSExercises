@@ -15,13 +15,19 @@ namespace CSExercises
     {
         public static void Main(string[] args)
         {
-            //PUT YOUR CODE HERE           
+            //PUT YOUR CODE HERE   
+            Console.WriteLine("Enter double precision number to square: ");
+            string inputString = Console.ReadLine();
+            double inputDouble = Convert.ToDouble(inputString);
+            double ans = square(inputDouble);
+            Console.WriteLine(ans);        
         }
 
         public static double square(double x)
         {
             //PUT YOUR CODE HERE
-            return 0;
+            double ans = Math.Pow(x, 2);
+            return ans;
 
         }
     }
