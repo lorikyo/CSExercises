@@ -14,7 +14,7 @@ namespace CSExercises
     //  0	        0.00
     //  3.232	    3.23
     //  4.555	    4.55
-
+       
 
     public class ExA5
     {
@@ -24,6 +24,7 @@ namespace CSExercises
             double inputDbl = Convert.ToDouble(inputStr);
 
             //YOUR CODE HERE
+            Console.WriteLine("{0:0.00}", inputDbl);
 
         }
 
