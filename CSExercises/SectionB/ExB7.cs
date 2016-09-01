@@ -19,13 +19,15 @@ namespace CSExercises
         public static void Main(string[] args)
         {
             //YOUR CODE HERE
+            Console.Write("enter kilometres travelled: ");
+            double dist = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine(CalculateFare(dist));
         }
 
         public static double CalculateFare(double distance)
         {
             //YOUR CODE HERE
-            return 0;
-
+            return 2.4 + distance*0.4;
         }
     }
 }

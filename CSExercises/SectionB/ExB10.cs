@@ -20,13 +20,21 @@ namespace CSExercises
         public static void Main(string[] args)
         {
             //YOUR CODE HERE
-
+            Console.WriteLine("enter side a: ");
+            double a = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("enter side b: ");
+            double b = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("enter side c: ");
+            double c = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine(CalculateArea(a, b, c));
         }
 
         public static double CalculateArea(double a, double b, double c)
         {
             //YOUR CODE HERE
-            return 0;
+            double s = (a + b + c) / 2;
+            double area = Math.Sqrt(s*(s - a)*(s - b)*(s - c));
+            return area;
         }
     }
 }
