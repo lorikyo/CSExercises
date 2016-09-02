@@ -16,6 +16,12 @@ namespace CSExercises
             string gender = Console.ReadLine();
 
             //YOUR CODE HERE
+            string salut;
+            if (gender == "M")
+                salut = "Mr.";
+            else
+                salut = "Ms.";
+            Console.WriteLine("Good Morning {0} {1}", salut, name);
         }
     }
 }

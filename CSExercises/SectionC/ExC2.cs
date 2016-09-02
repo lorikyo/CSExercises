@@ -22,6 +22,18 @@ namespace CSExercises
             int age = Convert.ToInt32(Console.ReadLine());
 
             //YOUR CODE HERE
+            string salut;
+            if (gender == "M")
+                if (age >= 40)
+                    salut = "Uncle";
+                else
+                    salut = "Mr.";
+            else
+                if (age >= 40)
+                salut = "Aunty";
+            else
+                salut = "Ms.";
+            Console.WriteLine("Good morning {0} {1}", salut, name);
         }
     }
 }

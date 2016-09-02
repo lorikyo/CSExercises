@@ -20,20 +20,26 @@ namespace CSExercises
     {
         public static void Main(string[] args)
         {
-
             //Your code here
-
-
-
+            Console.Write("enter distance: ");
+            double distance = Convert.ToDouble(Console.ReadLine());
+            double fare = CalculateFare(distance);
+            Console.WriteLine(fare);
         }
 
         public static double CalculateFare(double distance)
         {
             //YOUR CODE HERE
-            return 0;
-
-
-
+            double fare;
+            if (distance >= 0 && distance <= 0.5)
+                fare = 2.40;
+            else if (distance > 0.5 && distance <= 8.5 + 0.5)
+                fare = 2.40 + Math.Ceiling((distance - 0.5) * 1000 / 100) * 0.04;
+            else if (distance >= (0.5 + 8.5))
+                fare = 2.40 + 8.5 * 1000 / 100 * 0.04 + Math.Ceiling((distance - 0.5 - 8.5) * 1000 / 100) * 0.05;
+            else
+                fare = 0;
+            return fare;
         }
     }
 }
