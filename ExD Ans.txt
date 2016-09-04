@@ -1,0 +1,93 @@
+D1
+//YOUR CODE HERE
+            int num = 0; ////
+            do////
+            {////
+                Console.Write("Enter a number (1-100): ");////
+                num = Convert.ToInt32(Console.ReadLine());////
+            } while (num != 88);////
+
+            Console.WriteLine("Lucky you");////
+
+D2
+public class ExD2
+    {
+        public static void Main(string[] args)
+        {
+            Console.Write("Enter A: ");
+            int a = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Enter B: ");
+            int b = Convert.ToInt32(Console.ReadLine());
+
+            int hcf = 0;
+            int lcm = 0;
+
+            CalculateHCFAndLCM(a, b, ref hcf, ref lcm);
+
+            Console.WriteLine("HCF:" + hcf);
+            Console.WriteLine("LCM:" + lcm);
+        }
+
+        public static void CalculateHCFAndLCM(int a, int b, ref int hcf, ref int lcm)
+        {
+            //YOUR CODE HERE
+            //Don't worry about the use of "ref" keyword here. 
+            //At the end of the method, assign the HCF value to the hcf parameter
+            //and LCM to the lcm parameter. hcf = <some value>; lcm=<some value>;
+
+            int big = Math.Max(a, b);////
+            int small = Math.Min(a, b);////
+
+            while (big != small)////
+            {////
+                big = big - small;////
+
+                if (big < small)////
+                {////
+                    var temp = small;////
+                    small = big;////
+                    big = temp;////
+                }////
+            }////
+
+            hcf = big;////
+            lcm = (a * b) / hcf;////
+        }
+    }
+}
+
+D3
+public class ExD3
+    {
+        public static void Main(string[] args)
+        {
+            //YOUR CODE HERE
+            Random r = new Random(); ////
+            int secret = r.Next(0, 9); ////
+            int guess = 0; ////
+            int attempt = 0; ////
+            do ////
+            {////
+                Console.Write("Guess a number (0-9): ");////
+                guess = Convert.ToInt32(Console.ReadLine());////
+                attempt ++;////
+            } while (secret != guess);////
+
+            if (attempt <= 2)////
+            {////
+                Console.WriteLine("You are a Wizard!");////
+            }////
+            else if (attempt <= 5)////
+            {////
+                Console.WriteLine("You are a good guess");////
+            }////
+            else////
+            {////
+                Console.WriteLine("You are lousy");////
+            }////
+        }
+    }
+}
+
+
+
