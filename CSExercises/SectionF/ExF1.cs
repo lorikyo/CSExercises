@@ -45,30 +45,66 @@ namespace CSExercises
             //YOUR CODE HERE
             //Assign the result to minMonth, maxMonth and avg variable/parameter accordingly
 
+            //minMonth = CalculateMinMonth(sales);
+            //maxMonth = CalculateMaxMonth(sales);
+            //avg = CalculateAvgSales(sales);
 
+            minMonth = 0;
+            maxMonth = 0;
+            double totalSales = 0;
+            for (int i=0; i < sales.Length; i++)
+            {
+                if (sales[i] < sales[minMonth])
+                {
+                    minMonth = i;
+                }
+                if (sales[i] > sales[maxMonth])
+                {
+                    maxMonth = i;
+                }
+                totalSales = totalSales + sales[i];
+            }
+            avg = totalSales / sales.Length;
         }
 
         public static int CalculateMinMonth(int[] sales)
         {
             //YOUR CODE HERE
-            return 0;
-
+            int minMonth = 0;
+            for(int i =0; i < sales.Length; i++)
+            {
+                if(sales[i] < sales[minMonth])
+                {
+                    minMonth = i;
+                }
+            }
+            return minMonth;
         }
 
         public static int CalculateMaxMonth(int[] sales)
         {
             //YOUR CODE HERE
-            return 0;
-
-
-
+            int maxMonth = 0;
+            for (int i = 0; i < sales.Length; i++)
+            {
+                if (sales[i] > sales[maxMonth])
+                {
+                    maxMonth = i;
+                }
+            }
+            return maxMonth;
         }
 
         public static double CalculateAvgSales(int[] sales)
         {
             //YOUR CODE HERE
-            return 0;
-
+            double totalSales = 0;
+            for (int i =0; i<sales.Length; i++)
+            {
+                totalSales = totalSales + sales[i];
+            }
+            double avgSales = totalSales / sales.Length;
+            return avgSales;
         }
 
 
