@@ -32,11 +32,29 @@ namespace CSExercises
         public static bool IsPalindrome(string phrase)
         {
             //YOUR CODE HERE
-            return false;
+            string revPhrase = "";
 
+            for (int i = phrase.Length - 1; i >= 0; i--)
+            {
+                if (char.IsPunctuation(phrase, i) || phrase.Substring(i, 1) == " ")
+                {
+                    phrase = removeStringChar(phrase, i);
+                }
+            }
+            phrase = phrase.ToLower();
 
+            for (int i = phrase.Length - 1; i >= 0; i--)
+            {
+                revPhrase = revPhrase + phrase.Substring(i, 1);
+            }
+            return phrase.Equals(revPhrase);
+        }
 
-
+        public static string removeStringChar(string phrase, int i)
+        {
+            string newPhrase;
+            newPhrase = phrase.Substring(0, i) + phrase.Substring(i + 1, phrase.Length - i - 1);
+            return newPhrase;
         }
     }
 }
