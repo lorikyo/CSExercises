@@ -22,9 +22,20 @@ namespace CSExercises
         public static string ToTitleCase(string phrase)
         {
             //YOUR CODE HERE
-            return null;
+            string newPhrase = phrase;
+            string character;
+            for(int i =0; i<newPhrase.Length; i++)  //for each space inside string, ToUpper() the following character
+            {
+                if(newPhrase.Substring(i,1) == " ")
+                {
+                    character = newPhrase.Substring(i + 1, 1).ToUpper();
+                    newPhrase = newPhrase.Substring(0, i+1) + character + newPhrase.Substring(i + 2, newPhrase.Length - i-2);
+                }
+            }
+            character = newPhrase.Substring(0, 1).ToUpper();    //ToUpper() 1st character in string
+            newPhrase = character + newPhrase.Substring(1, newPhrase.Length - 1);
 
-
+            return newPhrase;
         }
     }
 }
